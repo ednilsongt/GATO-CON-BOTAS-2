@@ -1,11 +1,93 @@
 <!DOCTYPE html>
-<html>
+<html lang="es">
 <head>
-<meta charset=utf-8 />
-<title>EDNILSON GT</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EDNILSON GT - Streaming</title>
+    <meta name="description" content="Canal oficial de EDNILSON GT - Transmisiones en vivo y videos">
+    
+    <!-- Icono y estilo moderno -->
+    <link rel="icon" href="https://i.imgur.com/1Qz3f5G.png" type="image/png">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: #0f0f0f;
+            color: #fff;
+            height: 100vh;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+        }
+        header {
+            background: linear-gradient(135deg, #ff0000, #ff6b00);
+            padding: 15px 20px;
+            text-align: center;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.5);
+            z-index: 10;
+        }
+        header h1 {
+            font-size: 2rem;
+            text-shadow: 2px 2px 8px rgba(0,0,0,0.7);
+        }
+        .container {
+            flex: 1;
+            position: relative;
+            background: #000;
+        }
+        iframe {
+            position: absolute;
+            top: 0; left: 0;
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+        .loading {
+            position: absolute;
+            top: 50%; left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 1.5rem;
+            color: #ff0000;
+        }
+        footer {
+            background: #111;
+            padding: 10px;
+            text-align: center;
+            font-size: 0.9rem;
+            opacity: 0.8;
+        }
+        @media (max-width: 768px) {
+            header h1 { font-size: 1.6rem; }
+        }
+    </style>
 </head>
-  <iframe src="https://watchfun.fun/bu/?key=53X0ZhvJ5mt6fCnV1K9CGM6wwaGtU24FunQHV_ghh_6a-tyt-DWqK4YtIvohC0IPAHwDfhzhqsQe2xENorSQ12G9QgmrdUH23k-tyt-Htbmq_ghh_ypRx-tyt-JINLBwZFt44ukFrNjF1fj0barj" sandbox="allow-scripts allow-same-origin" style="border:0;width:100%;height:100%" allowfullscreen webkitallowfullscreen mozallowfullscreen></iframe>
 <body>
 
+    <header>
+        <h1>🔥 EDNILSON GT 🔥</h1>
+    </header>
+
+    <div class="container">
+        <div class="loading" id="loader">Cargando transmisión...</div>
+        
+        <iframe 
+            src="https://watchfun.fun/bu/?key=53X0ZhvJ5mt6fCnV1K9CGM6wwaGtU24FunQHV_ghh_6a-tyt-DWqK4YtIvohC0IPAHwDfhzhqsQe2xENorSQ12G9QgmrdUH23k-tyt-Htbmq_ghh_ypRx-tyt-JINLBwZFt44ukFrNjF1fj0barj"
+            allowfullscreen
+            allow="autoplay; fullscreen; encrypted-media"
+            sandbox="allow-scripts allow-same-origin allow-popups allow-modals"
+            loading="lazy">
+        </iframe>
+    </div>
+
+    <footer>
+        © 2025 EDNILSON GT - Todos los derechos reservados
+    </footer>
+
+    <script>
+        // Quitar el mensaje de "Cargando" cuando el iframe termine de cargar
+        document.querySelector('iframe').addEventListener('load', function() {
+            document.getElementById('loader').style.display = 'none';
+        });
+    </script>
 </body>
-</html>
+  </html>
